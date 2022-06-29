@@ -1,4 +1,4 @@
-export const svgFish = (svg, fishValues, values) => {
+export const mohoSvg = (svg, fishValues, values) => {
     let s = []
     fishValues = fishValues.map((a, ind) => {
         return s[ind] = (values.map((b) => {
