@@ -15,6 +15,7 @@ const mohoSvg = (svg, fishValues, framesNumbers) => {
 
 const hexInterpolation = (nowFrameNumber, fps, hex1, hex2) => {
 
+
     let hex = ''
 
     hex1 = hex1.slice(1)
@@ -47,12 +48,18 @@ const hexInterpolation = (nowFrameNumber, fps, hex1, hex2) => {
 
 const pathInterpolation = (nowFrameNumber, fps, arr1, arr2) => {
 
-    return  (arr1.map((a, i) => Number(a) ? Math.round((Number(a) + ((arr2[i] - Number(a)) / fps) * nowFrameNumber)*1000)/1000 : a)).join(' ')
+    return (arr1.map((a, i) => Number(a) ? Math.round((Number(a) + ((arr2[i] - Number(a)) / fps) * nowFrameNumber) * 1000) / 1000 : a)).join(' ')
 
 }
 
-const interpolation = (svgValuesArr,nowFrameNumber, fps, fromFrame, toFrame) => {
-// fps- количество кадров в секунду
+const interpolation = (svgValuesArr, nowFrameNumber, fps, fromFrame, toFrame) => {
+
+
+    if (typeof svgValuesArr !== 'array') {
+        throw new TypeError('Expected a array');
+    }
+
+    // fps- количество кадров в секунду
     return svgValuesArr.map((a) => {
         //console.log(a)
         // если хекс то разабьем на матрицу
@@ -78,4 +85,4 @@ const interpolation = (svgValuesArr,nowFrameNumber, fps, fromFrame, toFrame) => 
 
 }
 
-module.exports = {mohoSvg, interpolation}
+module.exports =mohoSvg, interpolation

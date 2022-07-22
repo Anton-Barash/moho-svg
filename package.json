@@ -1,12 +1,28 @@
 {
   "name": "moho-svg",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "animated SVG from MOHO",
+  "repository": "Anton-Barash/moho-svg",
+  
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "SVG",
+    "MOHO",
+    "animated SVG",
+    "SVG interpolation"
+  ],
+  "author": {
+		"name": "Anton",
+		"email": "5a.smartikon@gmail.com",
+		"url": "https://mohosvg.herokuapp.com/moho.html"
+	},
+  "files": [
+		"index.js",
+		"index.d.ts"
+	],
+  
   "license": "ISC"
 }
